@@ -1,178 +1,166 @@
-# Project Kisan - Google-Only API Integration
+# 🌾 Project-Kisan
 
-## 🚀 Getting Started
+Project-Kisan is an AI-powered agentic system built to support farmers with intelligent, context-aware agricultural assistance. Developed for **Google Agentic AI Day**, the project demonstrates how autonomous AI agents can help solve real-world challenges in agriculture through smart recommendations and decision support.
 
-### 1. Environment Setup
+---
 
-Create a `.env.local` file in your project root:
+## 🌍 Problem Statement
 
+Farmers often face challenges such as lack of timely information, limited access to expert guidance, and difficulty making data-driven decisions. Traditional solutions are static and reactive, offering limited personalization or adaptability.
 
-# Copy from .env.example
-cp .env.example .env.local
+Project-Kisan aims to bridge this gap using **Agentic AI**, enabling proactive and intelligent agricultural support.
 
+---
 
-### 2. Required API Keys
+## 🎯 Objectives
 
-#### Google AI API (Required)
-1. Go to [Google AI Studio](https://makersuite.google.com/app/apikey)
-2. Create a new API key
-3. Add to `.env.local`: `GOOGLE_AI_API_KEY=your_key_here`
+- Assist farmers with AI-driven insights
+- Enable autonomous decision-support using agentic workflows
+- Improve agricultural productivity and sustainability
+- Demonstrate real-world use of Agentic AI systems
 
-#### Firebase Project
-1. Visit [Firebase Console](https://console.firebase.google.com/)
-2. Create a new project or select an existing one
-3. Add to `.env.local`:
-   NEXT_PUBLIC_FIREBASE_API_KEY=your_firebase_key
-   NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
-   
+---
 
-#### Google Maps API
-1. Sign up at [Google Cloud Console](https://console.cloud.google.com/)
-2. Enable Google Maps API
-3. Add to `.env.local`: `GOOGLE_MAPS_API_KEY=your_maps_api_key`
+## 🤖 What is Agentic AI in Project-Kisan?
 
-### 3. Installation
+Project-Kisan uses the concept of **Agentic AI**, where AI agents:
+- Understand context
+- Take goal-oriented actions
+- Coordinate tasks autonomously
+- Adapt responses based on changing inputs
 
-# Install dependencies
-npm install
+This allows the system to move beyond simple Q&A and provide meaningful assistance.
 
-# Firebase setup
-npm install -g firebase-tools
-firebase login
-firebase init
+---
 
-### 4. Run Development Server
+## 🚀 Features
 
-npm run dev
+- Agentic AI-based agricultural assistance
+- Context-aware recommendations
+- User-friendly interaction interface
+- Modular and scalable architecture
+- Designed for real-world agricultural use cases
+- Event-ready demo implementation
+
+---
+
+## 🛠️ Tech Stack
+
+### Core Technologies
+- Python / JavaScript
+- Agentic AI concepts
+- AI / NLP-based logic
+
+### Tools & Platforms
+- Google AI ecosystem
+- Git & GitHub
+- API-based architecture
+
+---
+
+## 📂 Project Structure
+
+```
+
+project-kisan/
+├── app/
+├── agents/
+├── services/
+├── utils/
+├── README.md
+├── requirements.txt
+├── .gitignore
+
+````
+
+*(Structure may vary based on implementation)*
+
+---
+
+## ⚙️ Installation & Setup
+
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/project-kisan.git
+````
+
+2. Navigate to the project directory:
+
+```bash
+cd project-kisan
+```
+
+3. Install dependencies:
+
+```bash
+pip install -r requirements.txt
 # or
-yarn dev
+npm install
+```
 
-## 📡 API Endpoints
+4. Configure environment variables if required:
 
-### Crop Diagnosis
-- **POST** `/api/diagnosis`
-- **Body**: FormData with image file and language
-- **Response**: AI-powered crop diagnosis using Gemini Vision
+```bash
+.env
+```
 
-### Market Prices
-- **POST** `/api/market`
-- **Body**: `{ query: "crop_name", language: "en" }`
-- **Response**: Real market data + AI analysis using Gemini API
+5. Run the application:
 
-### Government Schemes
-- **POST** `/api/schemes`
-- **Body**: `{ query: "scheme_name", language: "en" }`
-- **Response**: Scheme information + eligibility from Firebase Firestore
+```bash
+python main.py
+# or
+npm start
+```
 
-### Weather Advice
-- **POST** `/api/weather`
-- **Body**: `{ lat: 12.34, lon: 56.78, language: "en" }`
-- **Response**: Weather-based farming advice using Google Maps API
+---
 
-## 🔧 Production Deployment
+## 🌱 Use Cases
 
-### Vercel (Recommended)
-1. Connect your GitHub repository
-2. Add environment variables in Vercel dashboard
-3. Deploy automatically
+* Crop-related guidance
+* Decision support for farming activities
+* Smart advisory for agricultural planning
+* AI-assisted knowledge access for farmers
 
-### Firebase Hosting
-# Build and deploy
-npm run build
-firebase deploy
+---
 
-## 🛡️ Security Features
+## 🔐 Ethics & Responsibility
 
-- **Rate Limiting**: 100 requests per 15 minutes per IP
-- **Input Validation**: All inputs sanitized
-- **Error Handling**: Graceful error responses
-- **API Key Protection**: Server-side only
-- **Firebase Rules**: Secure database access
-- **Data Encryption**: All data encrypted in transit and at rest
+Project-Kisan is built with responsible AI principles:
 
-## 📊 Monitoring
+* Does not replace agricultural experts
+* Encourages informed decision-making
+* Designed for assistance, not authority
+* Focuses on accessibility and usability
 
-- Query logging in Firebase Firestore
-- Error tracking using Cloud Monitoring
-- Usage analytics from Firebase Analytics
-- Performance monitoring
+---
 
-## 🔄 API Integration Status
+## 📈 Future Enhancements
 
-✅ **Implemented:**
-- Google Gemini AI for crop diagnosis
-- Google Gemini Pro for expert advice
-- Real market data integration
-- Government schemes database using Firebase Firestore
-- Weather-based recommendations using Google Maps API
-- Multi-language support using Google Translate
-- Rate limiting and security
+* Multi-language farmer support
+* Integration with weather and soil data
+* Voice-based interaction
+* Mobile-first deployment
+* Advanced agent collaboration workflows
 
-🚧 **Coming Soon:**
-- Firebase Auth: User profiles and history
-- Vertex AI: Custom agricultural models
-- Firebase Functions: Serverless backend
-- Google Cloud Translation: Real-time translation
-- Firebase Messaging: Push notifications
+---
 
-## 💰 Cost Optimization
+## 👨‍💻 Author
 
-**Free Tier Limits**:
-- Gemini API: 15 requests/minute
-- Firebase: 1GB storage, 50K reads/day
-- Maps API: $200 monthly credit
+**Muhammad Haashim**
+Computer Science Student | AI & Software Developer
+Founder – Codalix Agency
 
-**Production Scaling**:
-- Pay-per-use pricing
-- Automatic scaling
-- Built-in caching to reduce costs
+---
 
-## 🔒 Security & Privacy
+## 📄 Disclaimer
 
-- **API Keys**: Server-side only, never exposed
-- **Firebase Rules**: Secure database access
-- **Rate Limiting**: Prevent abuse
-- **Data Encryption**: All data encrypted in transit and at rest
+Project-Kisan is a prototype built for demonstration and educational purposes during Google Agentic AI Day. It does not provide guaranteed agricultural outcomes and should be used alongside expert advice.
 
-## 📊 Monitoring & Analytics
+---
 
-- **Firebase Analytics**: User behavior tracking
-- **Cloud Monitoring**: API usage and performance
-- **Error Reporting**: Automatic error tracking
-- **Custom Dashboards**: Agricultural insights
+## 📄 License
 
-## 🚀 Deployment
+This project is intended for educational and demonstration purposes.
 
-**Vercel (Recommended)**:
-# Deploy to Vercel
-vercel --prod
-
-# Environment variables in Vercel dashboard
-
-**Firebase Hosting**:
-# Build and deploy
-npm run build
-firebase deploy
-
-## 📈 Advantages of Google-Only Approach
-
-1. **Unified Billing**: Single Google Cloud account
-2. **Better Integration**: Services work seamlessly together
-3. **Consistent Performance**: Optimized for Google infrastructure
-4. **Advanced AI**: Access to latest Gemini models
-5. **Scalability**: Auto-scaling across all services
-6. **Security**: Enterprise-grade security across all services
-7. **Support**: Single point of contact for all services
-
-## 🎯 Next Steps
-
-1. Set up Google Cloud Project
-2. Enable required APIs
-3. Configure Firebase
-4. Add API keys to environment
-5. Deploy and test
-
-For detailed setup instructions, visit: [Setup Guide](https://docs.projectkisan.com/google-setup)
-# project-kisan
-Project-Kisan is an AI-powered agentic system designed to assist farmers with smart, context-aware agricultural guidance. Built for Google Agentic AI Day, it uses autonomous AI agents to provide insights, recommendations, and decision support for improving farm productivity and sustainability.
+```
 

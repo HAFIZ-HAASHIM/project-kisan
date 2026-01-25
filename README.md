@@ -6,10 +6,10 @@
 
 Create a `.env.local` file in your project root:
 
-\`\`\`bash
+
 # Copy from .env.example
 cp .env.example .env.local
-\`\`\`
+
 
 ### 2. Required API Keys
 
@@ -22,10 +22,9 @@ cp .env.example .env.local
 1. Visit [Firebase Console](https://console.firebase.google.com/)
 2. Create a new project or select an existing one
 3. Add to `.env.local`:
-   \`\`\`
    NEXT_PUBLIC_FIREBASE_API_KEY=your_firebase_key
    NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
-   \`\`\`
+   
 
 #### Google Maps API
 1. Sign up at [Google Cloud Console](https://console.cloud.google.com/)
@@ -34,7 +33,6 @@ cp .env.example .env.local
 
 ### 3. Installation
 
-\`\`\`bash
 # Install dependencies
 npm install
 
@@ -42,15 +40,12 @@ npm install
 npm install -g firebase-tools
 firebase login
 firebase init
-\`\`\`
 
 ### 4. Run Development Server
 
-\`\`\`bash
 npm run dev
 # or
 yarn dev
-\`\`\`
 
 ## 📡 API Endpoints
 
@@ -82,11 +77,9 @@ yarn dev
 3. Deploy automatically
 
 ### Firebase Hosting
-\`\`\`bash
 # Build and deploy
 npm run build
 firebase deploy
-\`\`\`
 
 ## 🛡️ Security Features
 
@@ -151,19 +144,15 @@ firebase deploy
 ## 🚀 Deployment
 
 **Vercel (Recommended)**:
-\`\`\`bash
 # Deploy to Vercel
 vercel --prod
 
 # Environment variables in Vercel dashboard
-\`\`\`
 
 **Firebase Hosting**:
-\`\`\`bash
 # Build and deploy
 npm run build
 firebase deploy
-\`\`\`
 
 ## 📈 Advantages of Google-Only Approach
 
@@ -184,3 +173,6 @@ firebase deploy
 5. Deploy and test
 
 For detailed setup instructions, visit: [Setup Guide](https://docs.projectkisan.com/google-setup)
+# project-kisan
+Project-Kisan is an AI-powered agentic system designed to assist farmers with smart, context-aware agricultural guidance. Built for Google Agentic AI Day, it uses autonomous AI agents to provide insights, recommendations, and decision support for improving farm productivity and sustainability.
+
